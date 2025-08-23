@@ -13,12 +13,15 @@
   <body>
     <main>
       <h1>Volkan Yardim</h1>
-
-      <!-- CTAs -->
-      <section class="hero_actions" aria-label="Aktionen">
-        <a href="#projects" class="btn">Projekte</a>
-        <a href="#contact" class="btn">Kontakt</a>
-      </section>
+      
+      <nav class="nav">
+        <ul>
+          <li class="navItem"><a href="#about">Über mich</a></li>
+          <li class="navItem"><a href="#skills">Skills</a></li>
+          <li class="navItem"><a href="#projects">Projekte</a></li>
+          <li class="navItem"><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
 
       <!-- Über mich -->
       <section class="about" id="about">
@@ -35,7 +38,7 @@
       </section>
 
       <section class="skills" id="skills">
-        <h1>Skills</h1>
+        <h2>Skills</h2>
 
         <ul>
           <li>C#/.Net - Testautomatisierung</li>
@@ -48,7 +51,19 @@
       <!-- Platzhalter, damit deine Ankerlinks funktionieren -->
       <section id="projects">
         <h2>Projekte</h2>
-        <!-- später Projektkarten -->
+        <section class="project" id="project">
+          <h4>Churn Prediction</h4>
+          <p>Ein Machine Learning Tool, welches anhand vorheriger Daten, Kundenabwanderungen vorhersagen kann. 
+          <p><em>Ziel: frühzeitige Maßnahmen zum Erhalt der Kunden einleiten</em></p>
+          <h5>Technologien</h5>
+          <ul>
+            <li>Python</li>
+            <li>Pandas</li>
+            <li>scikit-learn</li>
+            <li>Linear Regression</li>
+          </ul>
+        </section>
+          
       </section>
 
       <section id="contact">
@@ -61,5 +76,7 @@
     <footer>
       <p>&copy; 2025 Volkan Yardim</p>
     </footer>
+    <script src="scripts/scroll-restore.js" defer></script>
   </body>
+  <script></script>
 </html>

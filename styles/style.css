@@ -1,25 +1,36 @@
-/* ===== Basis / Reset ===== */
-* { box-sizing: border-box; }
 
-html{
-  min-height: 100%;
-}
+
 body {
-  margin: 0;
-  padding: 0;
-
-  /* Seite künstlich länger machen, wächst bei mehr Content weiter */
-  min-height: 200vh; /* passe auf 120vh/150vh/etc. an */
-
   background: blanchedalmond;
   font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.6;
   text-align: center;
-  scroll-behavior: smooth;
+}
+.nav ul {
+  list-style: none;       /* Punkte entfernen */
+  margin: 0;
+  padding: 0;
+  display: flex;          /* Flexbox → horizontal */
+  gap: 24px;              /* Abstand zwischen Links */
+  justify-content: center; /* zentriert im Container */
+  align-items: center;
 }
 
-/* Optional: globale Section-Abstände */
-section { padding: 32px 16px; }
+.nav a {
+  text-decoration: none;   /* Unterstreichung weg */
+  color: aliceblue;             /* Standardfarbe */
+  font-weight: 500;
+  transition: color 0.2s;
+  display: inline-block;
+  background-color: cornflowerblue;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  color: #0077cc;          /* Hover/Fokus-Farbe */
+}
 
 /* ===== Hero-CTAs ===== */
 .hero_actions {
@@ -53,7 +64,7 @@ section { padding: 32px 16px; }
   box-shadow: 0 2px 10px rgba(0,0,0,.06);
   */
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .about h2 { margin: 0 0 12px; }
@@ -122,4 +133,16 @@ section { padding: 32px 16px; }
 
 .contactBtn:hover{
   filter:brightness(0.95);
+}
+
+.project li{
+  gap: 10px;
+  display: inline-block;
+  border-radius: 8px;
+  background-color: aliceblue;
+  padding: 5px 5px;
+}
+
+.project li:hover{
+  filter: brightness(0.95);
 }
