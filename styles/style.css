@@ -1,0 +1,93 @@
+/* ===== Basis / Reset ===== */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: blanchedalmond; /* dein aktueller Page-Backgound */
+  font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  text-align: center; /* passt zu deinem Aufbau */
+}
+
+/* Optional: globale Section-Abstände */
+section { padding: 32px 16px; }
+
+/* ===== Hero-CTAs ===== */
+.hero_actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 16px 0;
+}
+
+.hero_actions .btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: cornflowerblue;   /* CTA-Farbe */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero_actions .btn:hover { filter: brightness(0.95); }
+.hero_actions .btn:focus-visible {
+  outline: 3px solid #fff; 
+  outline-offset: 2px;
+}
+
+/* ===== About (bis Ende der Section) ===== */
+.about {
+  /* optional eigener Hintergrund, wenn du willst:
+  background: #fff; 
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about h2 { margin: 0 0 12px; }
+
+.about .dcItem { 
+  font-weight: 600; 
+  margin: 8px 0; 
+}
+
+/* Liste als „Chips“ mit eigenem Punkt */
+.about ul {
+  list-style: none;        /* Standardpunkte aus */
+  padding: 0;
+  margin: 16px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* mittig anordnen */
+}
+
+.about li {
+  position: relative;
+  display: inline-block;   /* Box nur so breit wie der Inhalt */
+  background: aliceblue;   /* Box-Hintergrund */
+  border-radius: 12px;
+  padding: 8px 12px 8px 28px;  /* links Platz für Punkt */
+  transition: background-color .2s ease, transform .2s ease;
+}
+
+/* Eigener „Bullet“-Punkt links in Akzentfarbe */
+.about li::before {
+  content: "•";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: cornflowerblue;   /* gleiche Akzentfarbe wie CTA */
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* dezentes Hover ohne Layout-Sprung */
+.about li:hover {
+  background-color: #e6f0ff;
+  transform: translateY(-1px);
+}
