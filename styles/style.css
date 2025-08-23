@@ -1,12 +1,21 @@
 /* ===== Basis / Reset ===== */
 * { box-sizing: border-box; }
 
+html{
+  min-height: 100%;
+}
 body {
   margin: 0;
-  background: blanchedalmond; /* dein aktueller Page-Backgound */
+  padding: 0;
+
+  /* Seite künstlich länger machen, wächst bei mehr Content weiter */
+  min-height: 200vh; /* passe auf 120vh/150vh/etc. an */
+
+  background: blanchedalmond;
   font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.6;
-  text-align: center; /* passt zu deinem Aufbau */
+  text-align: center;
+  scroll-behavior: smooth;
 }
 
 /* Optional: globale Section-Abstände */
@@ -70,24 +79,47 @@ section { padding: 32px 16px; }
   display: inline-block;   /* Box nur so breit wie der Inhalt */
   background: aliceblue;   /* Box-Hintergrund */
   border-radius: 12px;
-  padding: 8px 12px 8px 28px;  /* links Platz für Punkt */
+  padding: 10px 10px;  /* links Platz für Punkt */
   transition: background-color .2s ease, transform .2s ease;
 }
 
-/* Eigener „Bullet“-Punkt links in Akzentfarbe */
-.about li::before {
-  content: "•";
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: cornflowerblue;   /* gleiche Akzentfarbe wie CTA */
-  font-size: 18px;
-  line-height: 1;
-}
 
 /* dezentes Hover ohne Layout-Sprung */
 .about li:hover {
   background-color: #e6f0ff;
   transform: translateY(-1px);
+}
+
+.skills ul{
+  list-style: none;
+  padding: 0;
+  margin: 16px;
+  flex-wrap: wrap;
+  display: flex;
+  gap:10px;
+  justify-content: center;
+
+}
+
+.skills li{
+  display: inline-block;
+  border-radius: 8px;
+  background-color: aliceblue;
+  padding: 10px 10px;
+}
+
+.skills li:hover{
+  filter:brightness(0.95);
+}
+.contactBtn{
+  border-radius: 8px;
+  display: inline-block;
+  background-color: cornflowerblue;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px
+}
+
+.contactBtn:hover{
+  filter:brightness(0.95);
 }
