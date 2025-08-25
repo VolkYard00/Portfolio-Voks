@@ -22,6 +22,10 @@
                 </ul>
         </nav>
 
+        <div class="skills-vorwort">
+            <h3>Hier erhalten Sie einen kleinen Einblick auf Skills, welche ich mir im Zuge meiner Tätigkeiten oder durch Kurse bzw. die Realisierung eigener Projekte angeeignet habe.</h2>
+        </div>
+
         <section class="skill-block">
         <h2>C# / .NET – Testautomatisierung</h2>
     
@@ -75,6 +79,88 @@
             </div>
         </div>
         </section>
+
+        <section class="skill-block">
+            <h2>Python, Datenanalyse, Machine Learning</h2>
+            <div class="skill-content">
+                <div class="task">
+                <h3>Tätigkeit</h3>
+                <p>
+                    Churn-Prediction-Tool, welches mit Daten trainiert wurde um ein bevorstehende Kundenabwanderung vorherzusagen. Ziel ist hierbei rechtzeitig Maßnahmen zum Erhalt des Kunden zu treffen.
+                </p>
+                </div>
+
+                <div class="code">
+                <h3>Beispielcode</h3>
+                <pre><code class="language-python">
+                from sklearn.datasets import make_classification
+                from sklearn.model_selection import train_test_split
+                from sklearn.linear_model import LogisticRegression
+                from sklearn.metrics import accuracy_score, confusion_matrix
+                import seaborn as sns
+                import pandas as pd
+                import matplotlib.pyplot as plt
+
+                # 1. Dummy-Daten generieren
+                X, y = make_classification(
+                    n_samples=1000, n_features=5, n_informative=3,
+                    n_redundant=0, n_repeated=0, n_classes=2, random_state=42
+                )
+
+                # 2. DataFrame erstellen
+                df = pd.DataFrame(X, columns=["Vertragsdauer", "Monatskosten", "Beschwerden", "Supportkontakt", "Alter"])
+                df["Churn"] = y
+
+                # 3. Train/Test Split
+                X_train, X_test, y_train, y_test = train_test_split(
+                    df.drop("Churn", axis=1), df["Churn"], test_size=0.2, random_state=42
+                )
+
+                # 4. Modell trainieren
+                model = LogisticRegression()
+                model.fit(X_train, y_train)
+
+                # 5. Vorhersage
+                y_pred = model.predict(X_test)
+
+                # 6. Bewertung
+                acc = accuracy_score(y_test, y_pred)
+                print(f"Accuracy: {acc:.2f}")
+
+                cm = confusion_matrix(y_test, y_pred)
+
+                # 7. Confusion Matrix visualisieren
+                sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
+                            xticklabels=["Kein Churn", "Churn"],
+                            yticklabels=["Kein Churn", "Churn"])
+                plt.xlabel("Vorhergesagt")
+                plt.ylabel("Tatsächlich")
+                plt.show()
+                </code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-block">
+        <h2>HTML & CSS – Webentwicklung</h2>
+        <div class="skill-content">
+            <div class="task">
+            <h3>Tätigkeit</h3>
+            <p>Strukturierte Webseiten mit HTML aufbauen und mit CSS modern gestalten.</p>
+            </div>
+            <div class="code">
+            <h3>Beispielcode</h3>
+            <pre><code class="language-html">
+            <a href="/pages/html-css.html">
+            <div class="card">
+            <h3>Portfolio Projekt</h3>
+            <p>Dies ist eine Beispiel-Card mit HTML & CSS.</p>
+            <p>Klicken um ein Showcase zu sehen!</p>
+            </div></a>
+            </code></pre>
+        </div>
+    </div>
+    </section>
 
     </main>
     

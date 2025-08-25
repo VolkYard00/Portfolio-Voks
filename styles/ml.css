@@ -27,3 +27,13 @@ body{
     width: 300px;
     border-radius: 150px;
 }
+
+pre {
+  background: #1e1e1e;
+  color: #f8f8f2;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 14px;
+}

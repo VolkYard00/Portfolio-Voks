@@ -31,3 +31,17 @@ pre {
   font-family: monospace;
   font-size: 14px;
 }
+
+.card:hover{
+  transform: scale(1.02);
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.language-html h3{
+  color: white;
+}
+
+.language-html p{
+  color: white;
+}
