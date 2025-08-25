@@ -9,6 +9,10 @@ body {
 }
 a{
   text-decoration: none;
+  color:black;
+}
+.ml{
+  color: white;
 }
 .ml:visited{
   color: white;
