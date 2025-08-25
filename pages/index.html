@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
   </head>
 
   <body>
@@ -16,9 +16,9 @@
       
       <nav class="nav">
         <ul>
-          <li class="navItem"><a href="#about">Über mich</a></li>
-          <li class="navItem"><a href="#skills">Skills</a></li>
-          <li class="navItem"><a href="#projects">Projekte</a></li>
+          <li class="navItem"><a href="/pages/about-me.html">Über mich</a></li>
+          <li class="navItem"><a href="/pages/skills.html">Skills</a></li>
+          <li class="navItem"><a href="/pages/projects.html">Projekte</a></li>
           <li class="navItem"><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
@@ -29,7 +29,7 @@
         <p class="dcItem">Ich studiere Wirtschaftsinformatik (Vertiefung Business Analytics).</p>
 
         <ul>
-          <li>Machine Learning</li>
+          <li><a href="../pages/ML.html">Machine Learning</a></li>
           <li>Natural Language Processing</li>
         </ul>
 
@@ -51,7 +51,8 @@
       <!-- Platzhalter, damit deine Ankerlinks funktionieren -->
       <section id="projects">
         <h2>Projekte</h2>
-        <section class="project" id="project">
+        <a href="../pages/ML.html">
+          <section class="project" id="project">
           <h4>Churn Prediction</h4>
           <p>Ein Machine Learning Tool, welches anhand vorheriger Daten, Kundenabwanderungen vorhersagen kann. 
           <p><em>Ziel: frühzeitige Maßnahmen zum Erhalt der Kunden einleiten</em></p>
@@ -63,6 +64,7 @@
             <li>Linear Regression</li>
           </ul>
         </section>
+        </a>
           
       </section>
 

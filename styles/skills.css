@@ -1,0 +1,33 @@
+.skill-block {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 16px rgba(0,0,0,.1);
+}
+
+.skill-block h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skill-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.task, .code {
+  flex: 1;
+}
+
+pre {
+  background: #1e1e1e;
+  color: #f8f8f2;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: monospace;
+  font-size: 14px;
+}

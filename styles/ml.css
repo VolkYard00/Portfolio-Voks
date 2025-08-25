@@ -1,0 +1,29 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.ml-opener{
+    border-color: gray;
+    display: inline-block;
+    border-radius: 8px;
+    border-style: solid;
+    background-color: antiquewhite;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.ml-opener:hover{
+    box-shadow: 0px 0px 5px black;
+    transform: translateY(-1px);
+    filter: brightness(0.94);
+    font-weight: 500;
+    transition: box-shadow 0.4s, transform 0.4s, filter 0.2s, font-weight 0.4s;
+}
+
+.ml-opener p{
+    margin: 10px
+}
+
+.ml-opener img{
+    width: 300px;
+    border-radius: 150px;
+}

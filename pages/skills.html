@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/skills.css">
+
+</head>
+<body>
+    <main>
+        <h1>Skills</h1>
+
+        <nav class="nav">
+                <ul>
+                <li class="navItem"><a href="../pages/index.html">Home</a></li>
+                <li class="navItem"><a href="/pages/about-me.html">Über mich</a></li>
+                <li class="navItem"><a href="/pages/skills.html">Skills</a></li>
+                <li class="navItem"><a href="/pages/projects.html">Projekte</a></li>
+                <li class="navItem"><a href="/pages/index.html#contact">Kontakt</a></li>
+                </ul>
+        </nav>
+
+        <section class="skill-block">
+        <h2>C# / .NET – Testautomatisierung</h2>
+    
+        <div class="skill-content">
+            <div class="task">
+            <h3>Tätigkeit</h3>
+            <p>Automatisierte Integrationstests entwickeln und pflegen,
+                z. B. für Login-Formulare oder API-Endpoints.</p>
+            </div>
+
+            <div class="code">
+            <h3>Beispielcode</h3>
+            <pre><code>
+            [Test]
+            public void Login_ShouldSucceed()
+            {
+                driver.Navigate().GoToUrl("https://example.com/login");
+                driver.FindElement(By.Id("username")).SendKeys("testuser");
+                driver.FindElement(By.Id("password")).SendKeys("password");
+                driver.FindElement(By.Id("login")).Click();
+                Assert.IsTrue(driver.PageSource.Contains("Welcome"));
+            }
+            </code></pre>
+            </div>
+        </div>
+        </section>
+
+        <section class="skill-block">
+        <h2>C# / .NET – Testautomatisierung</h2>
+
+        <div class="skill-content">
+            <div class="task">
+            <h3>Tätigkeit</h3>
+            <p>
+                API-Tests dienen dazu, die Schnittstellen zwischen Systemen zu prüfen. Dabei wird
+                kontrolliert, ob eine API die erwarteten Eingaben korrekt verarbeitet und die
+                richtigen Antworten liefert. Typische Aspekte sind Statuscodes (z. B. 200 OK),
+                Dateninhalte (JSON/XML), Performance und Fehlerbehandlung.
+            </p>
+            </div>
+
+            <div class="code">
+            <h3>Beispielcode</h3>
+            <pre><code class="language-csharp">[Test]
+        public async Task GetUsers_ShouldReturn200()
+        {
+            using var client = new HttpClient();
+            var response = await client.GetAsync("https://jsonplaceholder.typicode.com/users");
+            Assert.AreEqual(System.Net.HttpStatusCode.OK, response.StatusCode);
+        }</code></pre>
+            </div>
+        </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Volkan Yardim</p>
+    </footer>
+</body>
+</html>
