@@ -1,0 +1,42 @@
+.project-block{
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 16px rgba(0,0,0,.1);
+    text-align: center;
+}
+
+.project-code{
+    text-align: left;
+    background-color: black;
+    color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.project-block:hover{
+    transform: scale(1.01);
+    transition: all 0.4s;
+}
+
+.click-me{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+    margin: 40px;
+    border-radius: 10px;
+}
+
+.click-me:link,
+.click-me:visited {
+    color: white;   /* bleibt immer weiß */
+}
+
+.click-me:hover{
+    box-shadow: 0px 0px 20px white;
+    transform:translateY(-1px);
+    transition: all 0.3s;
+}
